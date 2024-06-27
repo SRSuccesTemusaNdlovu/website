@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabelo Remember Ndlovu - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('img.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ddd; /* Light grey for text color */
+        }
+
+        header, footer {
+            background-color: rgba(200, 200, 200, 0.9); /* Light grey */
+            padding: 20px;
+            text-align: center;
+            color: #333; /* Dark grey text */
+        }
+
+        nav {
+            background-color: #444; /* Medium grey */
+            color: #ddd; /* Light grey text */
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #ddd; /* Light grey text */
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #666; /* Darker grey on hover */
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(50, 50, 50, 0.7); /* Dark grey background */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .quote {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #ddd; /* Light grey text */
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(80, 80, 80, 0.9); /* Medium-dark grey */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: #ddd; /* Light grey text */
+        }
+
+        .project img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+
+        .skill img {
+            width: 105%;
+            height: 105%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .education-container {
+            text-align: left;
+        }
+
+        .education-item {
+            margin: 20px;
+        }
+
+        .contact-icons {
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .contact-icons img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s;
+        }
+
+        .contact-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Light background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333; /* Dark grey text */
+        }
+
+        form input[type="text"], form input[type="email"], form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #444; /* Medium grey */
+            color: #ddd; /* Light grey text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #666; /* Darker grey on hover */
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skill {
+                width: 80px;
+                height: 80px;
+            }
+
+            .profile-container {
+                flex-direction: column;
+            }
+
+            .quote {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Sabelo Remember Ndlovu</h1>
+        <p>Data Engineer, Data Analyst, Web Developer & Python Developer</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="profile-container">
+            <img src="images/img.jpeg" alt="Your Photo" class="profile-image">
+
+            <p class="quote">
+            My name is Sabelo Remember Ndlovu, and I am passionately pursuing a Data Engineering career, I am a certified Data Analyst, Web Developer Python Developer with experience in building innovative solutions.
+            <br>
+            <br>
+            I understand that the road to success is paved with both challenges and victories. By staying focused and maintaining forward momentum, I am confident that I can overcome any obstacle that comes my way
+            <br>          
+            <br>
+            "In the long run, there's a tendency for things to balance out. If you're lucky at one moment, you'll be unlucky the next. But the key is to stay focused and keep moving forward, no matter the setbacks." <br>
+                - Linus Torvalds, the creator of Linux
+
+            </p>
+        </div>
+
+        <div class="project" style="text-align: center">
+            <u><h3>Education / Academic Qualification</h3></u>
+
+
+            <div class="education-container" >
+                <div class="education-item">
+                    <p>
+                        Sicelosethu Secondary School<br>
+                        Dec 2016<br>
+                        Matric certificate
+                    </p>
+                </div>
+                <div class="education-item">
+                    <p>
+                        University Of Limpopo<br>
+                        Feb 2019 - incomplete<br>
+                        Bsc in Mathematical and Computational Science
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <p>
+                        Umuzi Academy<br>
+                        May 2021 - Present<br>
+                        National Certificate in Information Technology<br>
+                        (System Development) (SAQA ID 48872)
+                    </p>
+                </div>
+                <div class="education-item">
+                    <p>
+                        Coursera<br>
+                        March 2023<br>
+                        Data Analytics (Google)<br>
+                        Python<br>
+                        SQL for Data Science
+                    </p>
+                </div>
+            </div>
+                <p class="quote">
+                <div class="education-item">
+                    <a href="https://drive.google.com/drive/u/0/folders/1EmRZ3wuInO1kcWORMrhPWeeyI0Wl12AM" target="_blank">
+                        <img src="images/cv.jpeg" alt="CV Image">
+                    </a>
+                    <p>Click the image above to download my CV</p>
+                </div>
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="text-align: center;">
+        <div class="project">
+            <u><h3>Skills</h3></u>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="images/r.jpg" alt="R Programming" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/python.jpg" alt="Python Programming" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/html.jpg" alt="HTML" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/css.jpg" alt="CSS" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/sql.jpg" alt="SQL" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/dtd.jpeg" alt="Design Development Thinking" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/c++.jpeg" alt="C++" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/da.jpeg" alt="Data Analysis" class="skill-image">
+                </div>
+                <div class="skill">
+                    <img src="images/dj.png" alt="Data Analysis" class="skill-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>YouTube VA</h3>
+            <p>A simple Python application to download YouTube videos and extract audio using `pytube` and `moviepy`</p>
+            <a href="https://github.com/SRSuccesTemusaNdlovu/Persinal_projects/tree/main/YouTube%20VA" target="_blank">
+            <img src="images/ytva.jpeg" alt="YouTube VA" class="project-image">
+        </a>
+        <p>Click the image above to view the project</p>
+        </div>
+
+        <div class="project">
+            <h3>QR Gen</h3>
+            <p>This is a simple QR Code Generator application built using Python and Tkinter</p>
+            <a href="https://github.com/SRSuccesTemusaNdlovu/Persinal_projects/tree/main/QR%20Gen" target="_blank">
+            <img src="images/qr.jpeg" alt="QR Gen" class="project-image">
+        </a>
+        <p>Click the image above to view the project</p>
+        </div>
+
+        <div class="project">
+            <h3>Text2Audio Generator</h3>
+            <p>This is a simple Text to Speech (TTS) converter application built using Python and Tkinter</p>
+            <a href="https://github.com/SRSuccesTemusaNdlovu/Persinal_projects/tree/main/Text2Audio%20Generator" target="_blank">
+            <img src="images/t2s.jpeg" alt="Text2Audio Generator" class="project-image">
+        </a>
+        <p>Click the image above to view the project</p>
+        </div>
+
+        <div class="project">
+            <h3>De-Co-mpressor</h3>
+            <p>This is a simple Compression Engine application built using Python and Tkinter</p>
+            <a href="https://github.com/SRSuccesTemusaNdlovu/Persinal_projects/tree/main/De-Co-mpressor" target="_blank">
+            <img src="images/deco.jpeg" alt="De-Co-mpressor" class="project-image">
+        </a>
+        <p>Click the image above to view the project</p>
+        </div>
+    </section>
+
+  <section id="contact" >
+        <h2>Contact Me</h2>
+        <p >Fill the form to contact me through email.</p>
+
+        <div class="project">
+            <form action="send_email.php" method="post">
+                
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form> 
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-icons">
+            <p>Get in touch with me through social media. </p>
+            <a href="mailto:sabelo.ndlovu@umuzi.org"><img src="images/gmail.png" alt="Email Icon"></a>
+            <a href="https://www.linkedin.com/in/sabelo-ndlovu"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            <a href="https://github.com/SRSuccesTemusaNdlovu"><img src="images/github.png" alt="GitHub Icon"></a>
+        </div>
+        <p>&copy; 2023 Sabelo Remember Ndlovu. All rights reserved.</p>
+    </footer>
+</body>
+</html>
